@@ -10,6 +10,7 @@ ordb-ai/.venv/
 ordb-ai/__pycache__/
 ordb-ai/*.pyc
 ordb-ai/.env
+ordb-ai/venv/
 
 # Modelos descargados (HuggingFace cache)
 ordb-ai/models/
