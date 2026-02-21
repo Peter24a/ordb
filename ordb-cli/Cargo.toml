@@ -1,0 +1,22 @@
+[package]
+name = "ordb-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+walkdir = "2.4"
+blake3 = "1.5"
+rusqlite = { version = "0.30", features = ["bundled"] }
+infer = "0.15"
+kamadak-exif = "0.5"
+id3 = "1.1"
+reqwest = { version = "0.11", features = ["json", "blocking"] } # using blocking to start, or we can use async
+tokio = { version = "1.34", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.10"
+chrono = "0.4"

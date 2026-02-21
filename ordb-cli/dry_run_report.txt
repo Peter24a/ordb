@@ -1,0 +1,5 @@
+ORIGEN                                                                           → DESTINO
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+../test_exif_check2.jpg                                                          → ../test_dummy\Imagenes\2026\02_Febrero\Persona_Sola\test_exif_check2.jpg
+
+Total archivos proyectados: 1

@@ -1,0 +1,53 @@
+# ========================
+# Rust (ordb-cli)
+# ========================
+ordb-cli/target/
+
+# ========================
+# Python (ordb-ai)
+# ========================
+ordb-ai/.venv/
+ordb-ai/__pycache__/
+ordb-ai/*.pyc
+ordb-ai/.env
+
+# Modelos descargados (HuggingFace cache)
+ordb-ai/models/
+*.bin
+*.safetensors
+*.onnx
+
+# ========================
+# SQLite (estado temporal)
+# ========================
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.claude/
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Logs y reportes
+# ========================
+*.log
+reports/
+
+# ========================
+# Papelera del CLI
+# ========================
+_trash_organizador/

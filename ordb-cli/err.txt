@@ -1,0 +1,67 @@
+    Checking ordb-cli v0.1.0 (C:\Users\pedro\easywork\ordb\ordb-cli)
+warning: unused import: `std::sync::Arc`
+ --> src\scanner.rs:3:5
+  |
+3 | use std::sync::Arc;
+  |     ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `error`
+ --> src\scanner.rs:6:17
+  |
+6 | use log::{info, error};
+  |                 ^^^^^
+
+warning: unused import: `PathBuf`
+ --> src\enrichment.rs:1:23
+  |
+1 | use std::path::{Path, PathBuf};
+  |                       ^^^^^^^
+
+error[E0599]: no method named `artist` found for struct `id3::Tag` in the current scope
+   --> src\metadata.rs:46:25
+    |
+46  |             artist: tag.artist().map(|s| s.to_string()),
+    |                         ^^^^^^
+    |
+   ::: C:\Users\pedro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\id3-1.16.4\src\taglike.rs:393:8
+    |
+393 |     fn artist(&self) -> Option<&str> {
+    |        ------ the method is available for `id3::Tag` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `TagLike` which provides `artist` is implemented but not in scope; perhaps you want to import it
+    |
+1   + use id3::TagLike;
+    |
+help: there is a method `artists` with a similar name
+    |
+46  |             artist: tag.artists().map(|s| s.to_string()),
+    |                               +
+
+error[E0599]: no method named `album` found for struct `id3::Tag` in the current scope
+   --> src\metadata.rs:47:24
+    |
+47  |             album: tag.album().map(|s| s.to_string()),
+    |                        ^^^^^
+    |
+   ::: C:\Users\pedro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\id3-1.16.4\src\taglike.rs:490:8
+    |
+490 |     fn album(&self) -> Option<&str> {
+    |        ----- the method is available for `id3::Tag` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: there is a method `set_album` with a similar name, but with different arguments
+   --> C:\Users\pedro\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\id3-1.16.4\src\taglike.rs:504:5
+    |
+504 |     fn set_album(&mut self, album: impl Into<String>) {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: trait `TagLike` which provides `album` is implemented but not in scope; perhaps you want to import it
+    |
+1   + use id3::TagLike;
+    |
+
+For more information about this error, try `rustc --explain E0599`.
+warning: `ordb-cli` (bin "ordb-cli" test) generated 3 warnings
+error: could not compile `ordb-cli` (bin "ordb-cli" test) due to 2 previous errors; 3 warnings emitted
