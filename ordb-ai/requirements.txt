@@ -1,6 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
 fastapi==0.104.1
 uvicorn[standard]==0.24.0.post1
-transformers==4.35.2
-torch==2.1.1
+transformers==5.2.0
+tokenizers==0.22.2
+huggingface_hub==1.4.1
+torch==2.6.0+cu121
 Pillow==10.1.0
 pydantic==2.5.2
+numpy<2
